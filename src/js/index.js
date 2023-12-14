@@ -15,12 +15,12 @@ function SimpleCounter(props) {
 
             <div>
             </div>
-            <div className="six">{props.counter6}</div>
-            <div className="five">{props.counter5}</div>
-            <div className="four">{props.counter4}</div>
-            <div className="three">{props.counter3}</div>
-            <div className="two">{props.counter2}</div>
-            <div className="one">{props.counter1}</div>
+            <div className="six">{props.numCounter6}</div>
+            <div className="five">{props.numCounter5}</div>
+            <div className="four">{props.numCounter4}</div>
+            <div className="three">{props.numCounter3}</div>
+            <div className="two">{props.numCounter2}</div>
+            <div className="one">{props.numCounter1}</div>
 
         </div>
     );
@@ -37,11 +37,12 @@ setInterval(function () {
     const counter1 = Math.floor((counter / 1) % 10);
       
     counter ++
-console.log(counter6, counter5, counter4, counter3, counter2, counter1);
-}, 100)
-
 
 //render your react application
-ReactDOM.render(<SimpleCounter />, document.querySelector("#app"));
+
+ReactDOM.render(<SimpleCounter numCounter1={counter1} numCounter2={counter2} numCounter3={counter3} numCounter4={counter4} numCounter5={counter5} numCounter6={counter6}
+     />, document.querySelector("#app"));
+
+}, 1000)
 
 
